@@ -3,14 +3,14 @@ import previewImage from '@assets/img/social-preview-image.png'
 import logoImage from '@assets/img/logo.svg'
 
 export default defineThemeConfig({
-  name: 'Accessible Astro',
-  id: 'accessible-astro-starter',
+  name: 'Kariana Ninoska Rivas Rojas',
+  id: 'Portafolio Kariana Rivas',
   logo: logoImage,
   seo: {
-    title: 'Accessible Astro Starter',
+    title: 'Kariana Rivas | Portafolio',
     description:
-      'An Accessible Starter Theme for Astro including several accessibility features and tools to help you build faster.',
-    author: 'Incluud',
+  'Portafolio personal de Kariana Rivas, estudiante de Ingeniería de Sistemas en la Universidad El Bosque, interesada en tecnología, desarrollo de software, bases de datos y sistemas de información.',
+    author: 'Kariana Rivas',
     image: previewImage, // Can also be a string e.g. '/social-preview-image.png',
   },
   colors: {
@@ -91,20 +91,20 @@ export default defineThemeConfig({
     ],
   },
   socials: [
-    {
-      label: 'GitHub',
-      href: 'https://github.com/incluud/',
-      icon: 'lucide:github',
-    },
-    {
-      label: 'Bluesky',
-      href: 'https://bsky.app/profile/incluud.dev',
-      icon: 'lucide:bot-message-square',
-    },
-    {
-      label: 'Open Collective',
-      href: 'https://opencollective.com/incluud',
-      icon: 'lucide:hand-heart',
-    },
-  ],
+  {
+    label: 'GitHub',
+    href: 'https://github.com/Karilin27',
+    icon: 'lucide:github',
+  },
+  {
+    label: 'WhatsApp',
+    href: 'https://wa.me/573053990509',
+    icon: 'lucide:message-circle',
+  },
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/karianarivas/',
+    icon: 'lucide:instagram',
+  },
+],
 })
