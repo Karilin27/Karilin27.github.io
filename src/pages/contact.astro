@@ -6,136 +6,226 @@ import {
   Input,
   Button,
   Textarea,
-  Checkbox,
-  Fieldset,
   Heading,
   Link,
-  Radio,
-  Switch,
 } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 ---
 
-<DefaultLayout title="Contact">
-  <PageHeader title="Contact" subtitle="Have a question? Get in touch with us!" bgType="gradient" />
+<DefaultLayout title="Contacto">
+  <PageHeader
+    title="Contacto"
+    subtitle="¿Quieres ponerte en contacto conmigo? ¡Hablemos!"
+    bgType="gradient"
+  />
+
   <section class="my-16">
     <div class="container">
-      <Heading level="h2">Let's talk</Heading>
+      <Heading level="h2">Hablemos</Heading>
     </div>
   </section>
+
   <section class="container">
     <div class="grid grid-cols-1 gap-32 md:grid-cols-2">
+
+      <!-- FORMULARIO -->
       <div class="space-content">
         <Form name="contact" action="/thank-you" method="post">
-          <!-- Input field with custom validation message -->
+
           <Input
             name="firstname"
-            label="First name"
+            label="Nombre"
             required
-            data-validation="We need your first name to address you correctly"
+            data-validation="Por favor, ingresa tu nombre"
             autocomplete="given-name"
           />
 
-          <Input name="email" label="Email address" type="email" required autocomplete="email" />
-
-          <!-- Custom validation with pattern -->
-          <Input name="phone" label="Phone number" type="tel" required data-validation-pattern="^[0-9]{10}$" />
-
-          <Textarea name="message" label="Message" required />
-
-          <!-- Checkbox group with validation -->
-          <Fieldset
-            name="interests"
-            legend="What are you interested in?"
+          <Input
+            name="email"
+            label="Correo electrónico"
+            type="email"
             required
-            data-validation="Please select at least one area of interest"
-          >
-            <Checkbox name="accessibility" value="a11y" label="Accessibility and inclusive design" />
-            <Checkbox name="wcag-compliance" value="wcag" label="WCAG compliance and testing" />
-            <Checkbox name="screen-reader" value="sr" label="Screen reader optimization" />
-            <Checkbox name="keyboard-nav" value="keyboard" label="Keyboard navigation" />
-          </Fieldset>
+            autocomplete="email"
+          />
 
-          <!-- Radio group (shared names) -->
-          <Fieldset name="experience" legend="Your experience level" required>
-            <Radio name="experience" value="beginner" label="Beginner" />
-            <Radio name="experience" value="intermediate" label="Intermediate" />
-            <Radio name="experience" value="advanced" label="Advanced" />
-          </Fieldset>
+          <Textarea
+            name="message"
+            label="Mensaje"
+            required
+          />
 
-          <!-- Switches (shared names) -->
-          <Fieldset name="switches" legend="Your preferences" required>
-            <Switch name="newsletter" label="Subscribe to newsletter" />
-            <Switch name="updates" label="Receive updates" />
-          </Fieldset>
+          <Button htmlType="submit" type="primary">
+            Enviar mensaje
+          </Button>
 
-          <Button htmlType="submit" type="primary">Send Message</Button>
         </Form>
       </div>
+
+      <!-- INFORMACIÓN PERSONAL -->
       <div class="space-content">
-        <Heading level="h3">Contact us</Heading>
+
+        <Heading level="h3">Sobre mí</Heading>
+
         <p class="text-lg">
-          Experience the power of Accessible Astro Starter's Form components! This contact form showcases our
-          comprehensive form validation system with built-in accessibility features and WCAG 2.2 compliance.
+          Soy <strong>Kariana Ninoska Rivas Rojas</strong>, estudiante de
+          Ingeniería de Sistemas en la
+          <Link
+            href="https://www.unbosque.edu.co/"
+            isExternal
+          >
+            Universidad El Bosque
+          </Link>.
         </p>
+
         <p>
-          Our Form component includes automatic validation, proper error handling, semantic HTML structure, and screen
-          reader support. Test out the various input types, validation patterns, and interactive elements to see how
-          accessibility and usability work together seamlessly.
+          Me interesa la tecnología, el desarrollo de software, las bases de
+          datos y los sistemas de información. Actualmente estoy fortaleciendo
+          mis conocimientos y construyendo proyectos que me permitan crecer
+          tanto académica como profesionalmente.
         </p>
 
+        <p>
+          Si quieres conocer más sobre mis proyectos, mi formación o
+          simplemente ponerte en contacto conmigo, puedes hacerlo a través de
+          mis redes sociales.
+        </p>
+
+        <!-- CORREO -->
+       <div class="gap-2xs flex items-center">
+  <Icon
+    aria-hidden="true"
+    name="lucide:mail"
+    size={20}
+    class="flex-shrink-0"
+  />
+  <p>
+    <span class="font-bold">Email:</span>
+    <Link href="mailto:krivas@unbosque.edu.co">
+      krivas@unbosque.edu.co
+    </Link>
+  </p>
+</div>
+
+        <!-- WHATSAPP -->
         <div class="gap-2xs flex items-center">
-          <Icon aria-hidden="true" name="lucide:phone" size={20} class="flex-shrink-0" />
+          <Icon
+            aria-hidden="true"
+            name="lucide:message-circle"
+            size={20}
+            class="flex-shrink-0"
+          />
           <p>
-            <span class="font-bold">Phone:</span>
-            <Link href="tel:+12345678900">+1 (234) 567-8900</Link>
+            <span class="font-bold">WhatsApp:</span>
+            <Link
+              href="https://wa.me/573053990509"
+              isExternal
+            >
+              Escríbeme por WhatsApp
+            </Link>
           </p>
         </div>
 
+        <!-- UNIVERSIDAD -->
         <div class="gap-2xs flex items-center">
-          <Icon aria-hidden="true" name="lucide:mail" size={20} class="flex-shrink-0" />
+          <Icon
+            aria-hidden="true"
+            name="lucide:graduation-cap"
+            size={20}
+            class="flex-shrink-0"
+          />
           <p>
-            <span class="font-bold">Email:</span>
-            <Link href="mailto:hello@accessibleastro.dev">hello@accessibleastro.dev</Link>
+            <span class="font-bold">Universidad:</span>
+            <Link
+              href="https://www.unbosque.edu.co/"
+              isExternal
+            >
+              Universidad El Bosque
+            </Link>
           </p>
         </div>
 
+        <!-- UBICACIÓN -->
         <div class="gap-2xs flex items-center">
-          <Icon aria-hidden="true" name="lucide:map-pin" size={20} class="flex-shrink-0" />
+          <Icon
+            aria-hidden="true"
+            name="lucide:map-pin"
+            size={20}
+            class="flex-shrink-0"
+          />
           <p>
-            <span class="font-bold">Address:</span>
-            123 Accessibility Lane, Web Standards City
+            <span class="font-bold">Ubicación:</span>
+            Bogotá, Colombia
           </p>
         </div>
 
-        <div class="gap-2xs flex items-center">
-          <Icon aria-hidden="true" name="lucide:clock" size={20} class="flex-shrink-0" />
-          <p>
-            <span class="font-bold">Business Hours:</span>
-            Monday - Friday, 9:00 AM - 5:00 PM EST
-          </p>
-        </div>
-
+        <!-- REDES SOCIALES -->
         <ul class="flex flex-wrap gap-2">
+
+          <!-- GITHUB -->
           <li>
-            <Link href="/" isButton isExternal hideIcon animateOnHover animationType="boop">
-              <Icon aria-hidden="true" name="lucide:facebook" size={32} />
-              <span class="sr-only">Go to our Facebook page, opens in a new tab</span>
+            <Link
+              href="https://github.com/Karilin27"
+              isButton
+              isExternal
+              hideIcon
+              animateOnHover
+              animationType="boop"
+            >
+              <Icon
+                aria-hidden="true"
+                name="lucide:github"
+                size={32}
+              />
+              <span class="sr-only">
+                Visitar mi GitHub
+              </span>
             </Link>
           </li>
+
+          <!-- WHATSAPP -->
           <li>
-            <Link href="/" isButton isExternal hideIcon animateOnHover animationType="boop">
-              <Icon aria-hidden="true" name="lucide:twitter" size={32} />
-              <span class="sr-only">Go to our Twitter page, opens in a new tab</span>
+            <Link
+              href="https://wa.me/573053990509"
+              isButton
+              isExternal
+              hideIcon
+              animateOnHover
+              animationType="boop"
+            >
+              <Icon
+                aria-hidden="true"
+                name="lucide:message-circle"
+                size={32}
+              />
+              <span class="sr-only">
+                Contactarme por WhatsApp
+              </span>
             </Link>
           </li>
+
+          <!-- INSTAGRAM -->
           <li>
-            <Link href="/" isButton isExternal hideIcon animateOnHover animationType="boop">
-              <Icon aria-hidden="true" name="lucide:linkedin" size={32} />
-              <span class="sr-only">Go to our LinkedIn page, opens in a new tab</span>
+            <Link
+              href="https://www.instagram.com/karianarivas/"
+              isButton
+              isExternal
+              hideIcon
+              animateOnHover
+              animationType="boop"
+            >
+              <Icon
+                aria-hidden="true"
+                name="lucide:instagram"
+                size={32}
+              />
+              <span class="sr-only">
+                Visitar mi Instagram
+              </span>
             </Link>
           </li>
+
         </ul>
+
       </div>
     </div>
   </section>
