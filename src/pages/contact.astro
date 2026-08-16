@@ -1,14 +1,7 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
 import PageHeader from '@components/PageHeader.astro'
-import {
-  Form,
-  Input,
-  Button,
-  Textarea,
-  Heading,
-  Link,
-} from 'accessible-astro-components'
+import { Heading, Link } from 'accessible-astro-components'
 import { Icon } from 'astro-icon/components'
 ---
 
@@ -21,211 +14,181 @@ import { Icon } from 'astro-icon/components'
 
   <section class="my-16">
     <div class="container">
-      <Heading level="h2">Hablemos</Heading>
-    </div>
-  </section>
+      <div class="grid grid-cols-1 gap-16 md:grid-cols-2">
 
-  <section class="container">
-    <div class="grid grid-cols-1 gap-32 md:grid-cols-2">
+        <!-- INFORMACIÓN -->
+        <div class="space-content">
+          <Heading level="h2">Sobre mí</Heading>
 
-      <!-- FORMULARIO -->
-      <div class="space-content">
-        <Form name="contact" action="/thank-you" method="post">
-
-          <Input
-            name="firstname"
-            label="Nombre"
-            required
-            data-validation="Por favor, ingresa tu nombre"
-            autocomplete="given-name"
-          />
-
-          <Input
-            name="email"
-            label="Correo electrónico"
-            type="email"
-            required
-            autocomplete="email"
-          />
-
-          <Textarea
-            name="message"
-            label="Mensaje"
-            required
-          />
-
-          <Button htmlType="submit" type="primary">
-            Enviar mensaje
-          </Button>
-
-        </Form>
-      </div>
-
-      <!-- INFORMACIÓN PERSONAL -->
-      <div class="space-content">
-
-        <Heading level="h3">Sobre mí</Heading>
-
-        <p class="text-lg">
-          Soy <strong>Kariana Ninoska Rivas Rojas</strong>, estudiante de
-          Ingeniería de Sistemas en la
-          <Link
-            href="https://www.unbosque.edu.co/"
-            isExternal
-          >
-            Universidad El Bosque
-          </Link>.
-        </p>
-
-        <p>
-          Me interesa la tecnología, el desarrollo de software, las bases de
-          datos y los sistemas de información. Actualmente estoy fortaleciendo
-          mis conocimientos y construyendo proyectos que me permitan crecer
-          tanto académica como profesionalmente.
-        </p>
-
-        <p>
-          Si quieres conocer más sobre mis proyectos, mi formación o
-          simplemente ponerte en contacto conmigo, puedes hacerlo a través de
-          mis redes sociales.
-        </p>
-
-        <!-- CORREO -->
-       <div class="gap-2xs flex items-center">
-  <Icon
-    aria-hidden="true"
-    name="lucide:mail"
-    size={20}
-    class="flex-shrink-0"
-  />
-  <p>
-    <span class="font-bold">Email:</span>
-    <Link href="mailto:krivas@unbosque.edu.co">
-      krivas@unbosque.edu.co
-    </Link>
-  </p>
-</div>
-
-        <!-- WHATSAPP -->
-        <div class="gap-2xs flex items-center">
-          <Icon
-            aria-hidden="true"
-            name="lucide:message-circle"
-            size={20}
-            class="flex-shrink-0"
-          />
-          <p>
-            <span class="font-bold">WhatsApp:</span>
-            <Link
-              href="https://wa.me/573053990509"
-              isExternal
-            >
-              Escríbeme por WhatsApp
-            </Link>
-          </p>
-        </div>
-
-        <!-- UNIVERSIDAD -->
-        <div class="gap-2xs flex items-center">
-          <Icon
-            aria-hidden="true"
-            name="lucide:graduation-cap"
-            size={20}
-            class="flex-shrink-0"
-          />
-          <p>
-            <span class="font-bold">Universidad:</span>
+          <p class="text-lg">
+            Soy <strong>Kariana Ninoska Rivas Rojas</strong>, estudiante de
+            Ingeniería de Sistemas en la
             <Link
               href="https://www.unbosque.edu.co/"
               isExternal
             >
               Universidad El Bosque
-            </Link>
+            </Link>.
           </p>
-        </div>
 
-        <!-- UBICACIÓN -->
-        <div class="gap-2xs flex items-center">
-          <Icon
-            aria-hidden="true"
-            name="lucide:map-pin"
-            size={20}
-            class="flex-shrink-0"
-          />
           <p>
-            <span class="font-bold">Ubicación:</span>
-            Bogotá, Colombia
+            Me interesa la tecnología, el desarrollo de software, las bases de
+            datos y los sistemas de información. Actualmente estoy fortaleciendo
+            mis conocimientos y desarrollando proyectos que me permitan crecer
+            académica y profesionalmente.
+          </p>
+
+          <p>
+            Si quieres conocer más sobre mis proyectos o ponerte en contacto
+            conmigo, puedes encontrarme en los siguientes medios.
           </p>
         </div>
 
-        <!-- REDES SOCIALES -->
-        <ul class="flex flex-wrap gap-2">
+        <!-- CONTACTO -->
+        <div class="space-content">
+          <Heading level="h2">Mis contactos</Heading>
 
-          <!-- GITHUB -->
-          <li>
-            <Link
-              href="https://github.com/Karilin27"
-              isButton
-              isExternal
-              hideIcon
-              animateOnHover
-              animationType="boop"
-            >
-              <Icon
-                aria-hidden="true"
-                name="lucide:github"
-                size={32}
-              />
-              <span class="sr-only">
-                Visitar mi GitHub
-              </span>
-            </Link>
-          </li>
+          <!-- EMAIL -->
+          <div class="gap-2xs flex items-center">
+            <Icon
+              aria-hidden="true"
+              name="lucide:mail"
+              size={24}
+              class="flex-shrink-0"
+            />
+            <p>
+              <span class="font-bold">Email:</span>
+              <Link href="mailto:krivas@unbosque.edu.co">
+                krivas@unbosque.edu.co
+              </Link>
+            </p>
+          </div>
 
           <!-- WHATSAPP -->
-          <li>
-            <Link
-              href="https://wa.me/573053990509"
-              isButton
-              isExternal
-              hideIcon
-              animateOnHover
-              animationType="boop"
-            >
-              <Icon
-                aria-hidden="true"
-                name="lucide:message-circle"
-                size={32}
-              />
-              <span class="sr-only">
-                Contactarme por WhatsApp
-              </span>
-            </Link>
-          </li>
+          <div class="gap-2xs flex items-center">
+            <Icon
+              aria-hidden="true"
+              name="lucide:message-circle"
+              size={24}
+              class="flex-shrink-0"
+            />
+            <p>
+              <span class="font-bold">WhatsApp:</span>
+              <Link
+                href="https://wa.me/573053990509"
+                isExternal
+              >
+                Escríbeme por WhatsApp
+              </Link>
+            </p>
+          </div>
 
-          <!-- INSTAGRAM -->
-          <li>
-            <Link
-              href="https://www.instagram.com/karianarivas/"
-              isButton
-              isExternal
-              hideIcon
-              animateOnHover
-              animationType="boop"
-            >
-              <Icon
-                aria-hidden="true"
-                name="lucide:instagram"
-                size={32}
-              />
-              <span class="sr-only">
-                Visitar mi Instagram
-              </span>
-            </Link>
-          </li>
+          <!-- UNIVERSIDAD -->
+          <div class="gap-2xs flex items-center">
+            <Icon
+              aria-hidden="true"
+              name="lucide:graduation-cap"
+              size={24}
+              class="flex-shrink-0"
+            />
+            <p>
+              <span class="font-bold">Universidad:</span>
+              <Link
+                href="https://www.unbosque.edu.co/"
+                isExternal
+              >
+                Universidad El Bosque
+              </Link>
+            </p>
+          </div>
 
-        </ul>
+          <!-- UBICACIÓN -->
+          <div class="gap-2xs flex items-center">
+            <Icon
+              aria-hidden="true"
+              name="lucide:map-pin"
+              size={24}
+              class="flex-shrink-0"
+            />
+            <p>
+              <span class="font-bold">Ubicación:</span>
+              Bogotá, Colombia
+            </p>
+          </div>
 
+          <!-- REDES -->
+          <div class="pt-4">
+            <Heading level="h3">También puedes encontrarme en</Heading>
+
+            <ul class="flex flex-wrap gap-2">
+
+              <!-- GITHUB -->
+              <li>
+                <Link
+                  href="https://github.com/Karilin27"
+                  isButton
+                  isExternal
+                  hideIcon
+                  animateOnHover
+                  animationType="boop"
+                >
+                  <Icon
+                    aria-hidden="true"
+                    name="lucide:github"
+                    size={32}
+                  />
+                  <span class="sr-only">
+                    Visitar mi GitHub
+                  </span>
+                </Link>
+              </li>
+
+              <!-- WHATSAPP -->
+              <li>
+                <Link
+                  href="https://wa.me/573053990509"
+                  isButton
+                  isExternal
+                  hideIcon
+                  animateOnHover
+                  animationType="boop"
+                >
+                  <Icon
+                    aria-hidden="true"
+                    name="lucide:message-circle"
+                    size={32}
+                  />
+                  <span class="sr-only">
+                    Contactarme por WhatsApp
+                  </span>
+                </Link>
+              </li>
+
+              <!-- INSTAGRAM -->
+              <li>
+                <Link
+                  href="https://www.instagram.com/karianarivas/"
+                  isButton
+                  isExternal
+                  hideIcon
+                  animateOnHover
+                  animationType="boop"
+                >
+                  <Icon
+                    aria-hidden="true"
+                    name="lucide:instagram"
+                    size={32}
+                  />
+                  <span class="sr-only">
+                    Visitar mi Instagram
+                  </span>
+                </Link>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
       </div>
     </div>
   </section>

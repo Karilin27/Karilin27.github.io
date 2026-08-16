@@ -3,7 +3,7 @@ import previewImage from '@assets/img/social-preview-image.png'
 import logoImage from '@assets/img/logo.svg'
 
 export default defineThemeConfig({
-  name: 'Kariana Ninoska Rivas Rojas',
+  name: 'Kariana Ninoska Rivas Rojas',  
   id: 'Portafolio Kariana Rivas',
   logo: logoImage,
   seo: {
@@ -19,77 +19,40 @@ export default defineThemeConfig({
     neutral: '#b9bec4',
     outline: '#ff4500',
   },
-  navigation: {
-    darkmode: true,
-    items: [
-      {
-        type: 'link',
-        label: 'Home',
-        href: '/',
-      },
-      {
-        type: 'link',
-        label: 'Blog',
-        href: '/blog',
-      },
-      {
-        type: 'link',
-        label: 'Portfolio',
-        href: '/portfolio',
-      },
-      {
-        label: 'Features',
-        type: 'dropdown',
-        items: [
-          {
-            label: 'Accessibility statement',
-            href: '/accessibility-statement',
-          },
-          {
-            label: 'Accessible components',
-            href: '/accessible-components',
-          },
-          {
-            label: 'Accessible launcher',
-            href: '/accessible-launcher',
-          },
-          {
-            label: 'Color contrast checker',
-            href: '/color-contrast-checker',
-          },
-          {
-            label: 'Markdown page',
-            href: '/markdown-page',
-          },
-          {
-            label: 'MDX page',
-            href: '/mdx-page',
-          },
-          {
-            label: '404 page',
-            href: '/404',
-          },
-          {
-            label: 'Sitemap',
-            href: '/sitemap',
-          },
-        ],
-      },
-      {
-        type: 'link',
-        label: 'Contact',
-        href: '/contact',
-      },
-      {
-        type: 'link',
-        label: 'Go to our GitHub page, opens in new tab',
-        href: 'https://github.com/incluud/accessible-astro-starter',
-        icon: 'lucide:github',
-        external: true,
-        excludeFromLauncher: true,
-      },
-    ],
-  },
+navigation: {
+  darkmode: true,
+
+  items: [
+    {
+      type: 'link',
+      label: 'Home',
+      href: '/',
+    },
+    {
+      type: 'link',
+      label: 'Portfolio',
+      href: '/portfolio',
+    },
+    {
+      type: 'link',
+      label: 'Evidencias',
+      href: '/evidencias',
+    },
+    {
+      type: 'link',
+      label: 'Contacto',
+      href: '/contact',
+    },
+    {
+      type: 'link',
+      label: 'GitHub',
+      href: 'https://github.com/Karilin27',
+      icon: 'lucide:github',
+      external: true,
+      excludeFromLauncher: true,
+    },
+  ],
+},
   socials: [
   {
     label: 'GitHub',

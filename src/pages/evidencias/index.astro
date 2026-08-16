@@ -1,0 +1,102 @@
+---
+import DefaultLayout from '@layouts/DefaultLayout.astro'
+import { Heading } from 'accessible-astro-components'
+---
+
+<DefaultLayout title="Kariana Rivas | Evidencias" useTitleTemplate={false}>
+
+  <section class="my-32">
+    <div class="container">
+
+      <p class="text-lg mb-4">
+        Home / Evidencias
+      </p>
+
+      <Heading level="h1" class="mb-8">
+        Evidencias
+      </Heading>
+
+      <p class="text-2xl max-w-4xl leading-relaxed">
+        En esta sección iré recopilando ejercicios, scripts,
+        actividades y trabajos realizados durante mi formación
+        académica, especialmente en el área de Bases de Datos 2.
+      </p>
+
+    </div>
+  </section>
+
+
+  <section class="my-16">
+    <div class="container">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+        <article class="p-8 rounded-lg border">
+          <p class="text-sm uppercase tracking-wider mb-3">
+            Bases de Datos 2
+          </p>
+
+          <h2 class="text-3xl font-bold mb-4">
+            SQL
+          </h2>
+
+          <p class="text-lg">
+            Consultas, ejercicios y actividades realizadas
+            utilizando SQL.
+          </p>
+        </article>
+
+
+        <article class="p-8 rounded-lg border">
+          <p class="text-sm uppercase tracking-wider mb-3">
+            Bases de Datos 2
+          </p>
+
+          <h2 class="text-3xl font-bold mb-4">
+            PL/SQL Scripts
+          </h2>
+
+          <p class="text-lg">
+            Scripts, procedimientos y ejercicios desarrollados
+            utilizando PL/SQL.
+          </p>
+        </article>
+
+
+        <article class="p-8 rounded-lg border">
+          <p class="text-sm uppercase tracking-wider mb-3">
+            Bases de Datos 2
+          </p>
+
+          <h2 class="text-3xl font-bold mb-4">
+            NoSQL
+          </h2>
+
+          <p class="text-lg">
+            Actividades y ejercicios relacionados con bases
+            de datos NoSQL.
+          </p>
+        </article>
+
+
+        <article class="p-8 rounded-lg border">
+          <p class="text-sm uppercase tracking-wider mb-3">
+            Bases de Datos 2
+          </p>
+
+          <h2 class="text-3xl font-bold mb-4">
+            Proyecto
+          </h2>
+
+          <p class="text-lg">
+            Espacio destinado para documentar y presentar
+            el proyecto final de Bases de Datos 2.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+</DefaultLayout>

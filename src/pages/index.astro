@@ -1,221 +1,28 @@
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import FeaturedProjects from '@components/FeaturedProjects.astro'
-import FeaturedPosts from '@components/FeaturedPosts.astro'
-import { Heading, Link } from 'accessible-astro-components'
+import { Heading } from 'accessible-astro-components'
 ---
 
 <DefaultLayout title="Kariana Rivas | Portafolio" useTitleTemplate={false}>
 
-  <!-- HERO / PRESENTACIÓN -->
-  <section class="min-h-[85vh] flex items-center">
-    <div class="container grid grid-cols-1 gap-16 md:grid-cols-2 items-center">
-
-      <!-- Texto -->
-      <div class="flex flex-col items-start gap-6">
-
-        <p class="text-xl">
-          Hola, soy
-        </p>
-
-        <h1 class="text-6xl md:text-7xl font-bold leading-tight">
-          Kariana
-          <span class="block">Rivas</span>
-        </h1>
-
-        <h2 class="text-3xl">
-          Estudiante de Ingeniería de Sistemas
-        </h2>
-
-        <p class="text-xl leading-relaxed max-w-2xl">
-          Soy estudiante de Ingeniería de Sistemas en
-          <a
-            href="https://www.unbosque.edu.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="underline"
-          >
-            la Universidad El Bosque
-          </a>.
-          Me interesa la tecnología, el desarrollo de software,
-          las bases de datos y la creación de soluciones que
-          combinen lógica, innovación y tecnología.
-        </p>
-
-        <p class="text-xl leading-relaxed max-w-2xl">
-          En este espacio comparto algunos de mis proyectos,
-          aprendizajes y experiencias durante mi formación
-          como futura ingeniera.
-        </p>
-
-        <div class="flex flex-wrap gap-4 mt-4">
-          <Link
-            href="/portfolio"
-            isButton
-            type="primary"
-            animateOnHover
-            animationType="boop"
-          >
-            Ver mis proyectos
-          </Link>
-
-          <a
-            href="https://www.unbosque.edu.co/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center rounded-md border px-6 py-3"
-          >
-            Universidad El Bosque
-          </a>
-        </div>
-
-      </div>
-
-      <!-- Foto -->
-      <div class="flex justify-center">
-        <div class="relative">
-          <img
-            src="/kariana.jpeg"
-            alt="Fotografía de Kariana Rivas"
-            class="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full"
-          />
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- SOBRE MÍ -->
+  <!-- ENCABEZADO -->
   <section class="my-32">
     <div class="container">
 
-      <Heading level="h2" class="mb-8">
-        Sobre mí
+      <p class="text-lg mb-4">
+        Home / Portfolio
+      </p>
+
+      <Heading level="h1" class="mb-8">
+        Mi Portafolio
       </Heading>
 
-      <div class="max-w-4xl">
-        <p class="text-2xl leading-relaxed">
-          Actualmente me encuentro en formación como Ingeniera de
-          Sistemas, desarrollando conocimientos en diferentes áreas
-          de la tecnología y la informática.
-        </p>
-
-        <p class="text-2xl leading-relaxed mt-6">
-          Me gusta aprender sobre programación, desarrollo web,
-          bases de datos, estructuras de datos y sistemas de
-          información. También disfruto trabajar en proyectos donde
-          pueda aplicar lo aprendido y seguir desarrollando nuevas
-          habilidades.
-        </p>
-
-        <p class="text-2xl leading-relaxed mt-6">
-          Este portafolio es una muestra de mi proceso de aprendizaje y
-          mis proyectos académicos.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-
-<section class="my-32">
-  <div class="container">
-
-    <Heading level="h2" class="mb-8">
-      Conóceme
-    </Heading>
-
-    <p class="text-2xl max-w-3xl mb-10">
-      En este video te cuento un poco sobre mí, mis intereses
-      y lo que espero lograr durante mi formación como ingeniera.
-    </p>
-
-    <div class="flex justify-center">
-      <iframe
-        class="w-full max-w-[400px] aspect-[9/16] rounded-lg"
-        src="https://www.youtube.com/embed/LeIlc9NQWP4"
-        title="Video de presentación de Kariana Rivas"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
-
-  </div>
-</section>
-
-
-  <!-- ÁREAS DE INTERÉS -->
-  <section class="my-32">
-    <div class="container">
-
-      <Heading level="h2" class="mb-12">
-        Áreas de interés
-      </Heading>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <div class="p-8 rounded-lg border">
-          <h3 class="text-2xl font-bold mb-4">
-            Desarrollo de software
-          </h3>
-          <p class="text-lg">
-            Creación de aplicaciones y soluciones utilizando
-            diferentes tecnologías y lenguajes de programación.
-          </p>
-        </div>
-
-        <div class="p-8 rounded-lg border">
-          <h3 class="text-2xl font-bold mb-4">
-            Bases de datos
-          </h3>
-          <p class="text-lg">
-            Diseño, consulta y gestión de bases de datos,
-            SQL y sistemas de información.
-          </p>
-        </div>
-
-        <div class="p-8 rounded-lg border">
-          <h3 class="text-2xl font-bold mb-4">
-            Tecnología
-          </h3>
-          <p class="text-lg">
-            Exploración de nuevas herramientas y tecnologías
-            para resolver problemas y crear soluciones digitales.
-          </p>
-        </div>
-
-        <div class="p-8 rounded-lg border">
-          <h3 class="text-2xl font-bold mb-4">
-            Desarrollo web
-          </h3>
-          <p class="text-lg">
-            Creación de sitios y aplicaciones web modernas,
-            funcionales y accesibles.
-          </p>
-        </div>
-
-        <div class="p-8 rounded-lg border">
-          <h3 class="text-2xl font-bold mb-4">
-            Estructuras de datos
-          </h3>
-          <p class="text-lg">
-            Algoritmos, estructuras de datos y resolución
-            de problemas mediante programación.
-          </p>
-        </div>
-
-        <div class="p-8 rounded-lg border">
-          <h3 class="text-2xl font-bold mb-4">
-            Aprendizaje continuo
-          </h3>
-          <p class="text-lg">
-            Siempre estoy buscando aprender nuevas herramientas,
-            conceptos y tecnologías.
-          </p>
-        </div>
-
-      </div>
+      <p class="text-2xl max-w-4xl leading-relaxed">
+        Aquí encontrarás algunos de los proyectos que he desarrollado
+        durante mi formación como estudiante de Ingeniería de Sistemas.
+        En ellos aplico conocimientos de programación, bases de datos,
+        estructuras de datos y desarrollo de software.
+      </p>
 
     </div>
   </section>
@@ -225,63 +32,148 @@ import { Heading, Link } from 'accessible-astro-components'
   <section class="my-32">
     <div class="container">
 
-      <Heading level="h2" class="mb-8">
+      <Heading level="h2" class="mb-12">
         Mis proyectos
       </Heading>
 
-      <p class="text-2xl max-w-4xl mb-12">
-        Algunos de los proyectos que he desarrollado durante mi
-        formación académica y mi proceso de aprendizaje.
-      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-      <FeaturedProjects />
+        <!-- PROYECTO 1 -->
+        <article class="p-8 rounded-lg border">
+
+          <h3 class="text-3xl font-bold mb-4">
+            Sistema de Nómina
+          </h3>
+
+          <p class="text-lg leading-relaxed mb-6">
+            Aplicación desarrollada para gestionar empleados y procesos
+            de nómina, aplicando conceptos de programación orientada a
+            objetos, arquitectura MVC y desarrollo web.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded border">
+              Java
+            </span>
+            <span class="px-3 py-1 rounded border">
+              Jakarta EE
+            </span>
+            <span class="px-3 py-1 rounded border">
+              JSF
+            </span>
+            <span class="px-3 py-1 rounded border">
+              MVC
+            </span>
+          </div>
+
+        </article>
+
+
+        <!-- PROYECTO 2 -->
+        <article class="p-8 rounded-lg border">
+
+          <h3 class="text-3xl font-bold mb-4">
+            Sistema de rutas de TransMilenio
+          </h3>
+
+          <p class="text-lg leading-relaxed mb-6">
+            Proyecto basado en estructuras de datos y teoría de grafos
+            para representar estaciones y conexiones del sistema
+            TransMilenio y encontrar rutas entre diferentes estaciones.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded border">
+              Java
+            </span>
+            <span class="px-3 py-1 rounded border">
+              Grafos
+            </span>
+            <span class="px-3 py-1 rounded border">
+              BFS
+            </span>
+            <span class="px-3 py-1 rounded border">
+              DFS
+            </span>
+          </div>
+
+        </article>
+
+
+        <!-- PROYECTO 3 -->
+        <article class="p-8 rounded-lg border">
+
+          <h3 class="text-3xl font-bold mb-4">
+            Proyectos de Bases de Datos
+          </h3>
+
+          <p class="text-lg leading-relaxed mb-6">
+            Ejercicios y proyectos académicos relacionados con el diseño,
+            consulta y administración de bases de datos utilizando SQL
+            y diferentes herramientas de gestión de información.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded border">
+              SQL
+            </span>
+            <span class="px-3 py-1 rounded border">
+              Oracle
+            </span>
+            <span class="px-3 py-1 rounded border">
+              Bases de datos
+            </span>
+          </div>
+
+        </article>
+
+
+        <!-- PROYECTO 4 -->
+        <article class="p-8 rounded-lg border">
+
+          <h3 class="text-3xl font-bold mb-4">
+            Otros proyectos académicos
+          </h3>
+
+          <p class="text-lg leading-relaxed mb-6">
+            Espacio para agregar nuevos proyectos desarrollados durante
+            mi carrera y continuar mostrando mi proceso de aprendizaje
+            en tecnología e ingeniería de sistemas.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 rounded border">
+              Programación
+            </span>
+            <span class="px-3 py-1 rounded border">
+              Tecnología
+            </span>
+            <span class="px-3 py-1 rounded border">
+              Ingeniería de Sistemas
+            </span>
+          </div>
+
+        </article>
+
+      </div>
 
     </div>
   </section>
 
 
-  <!-- BLOG / APRENDIZAJES -->
-  <section class="my-32">
-    <div class="container">
-
-      <Heading level="h2" class="mb-8">
-        Aprendizajes y experiencias
-      </Heading>
-
-      <p class="text-2xl max-w-4xl mb-12">
-        Un espacio donde puedo compartir temas relacionados con
-        programación, tecnología, bases de datos y otros aprendizajes
-        de mi carrera.
-      </p>
-
-      <FeaturedPosts />
-
-    </div>
-  </section>
-
-
-  <!-- CIERRE -->
+  <!-- PRÓXIMAMENTE -->
   <section class="my-32">
     <div class="container text-center">
 
       <Heading level="h2" class="mb-8">
-        ¿Quieres conocer más sobre mi trabajo?
+        Próximamente
       </Heading>
 
-      <p class="text-2xl max-w-3xl mx-auto mb-8">
-        Puedes explorar mis proyectos, conocer más sobre mí
-        o contactarme a través de mis redes.
+      <p class="text-xl max-w-3xl mx-auto">
+        Este portafolio seguirá creciendo a medida que desarrolle
+        nuevos proyectos y adquiera nuevas habilidades durante mi
+        formación profesional.
       </p>
-
-      <Link
-        href="/contact"
-        isButton
-        type="primary"
-        animateOnHover
-        animationType="boop"
-      >
-        Contáctame
-      </Link>
 
     </div>
   </section>
