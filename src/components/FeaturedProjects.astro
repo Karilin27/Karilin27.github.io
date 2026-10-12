@@ -30,7 +30,7 @@ interface Props {
   title?: string
 }
 
-const { class: className, limit = 3, title = 'Featured projects' } = Astro.props
+const { class: className, limit = 8, title = 'Featured projects' } = Astro.props
 
 // Get projects from content collection
 const projects = await getCollection('projects')
