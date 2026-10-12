@@ -7,7 +7,7 @@ import { getCollection } from 'astro:content'
 const projects = await getCollection('projects')
 
 const filteredProjects = projects.filter(
-  (project) => project.id === 'project-08'
+  (project) => project.data.title === 'Taller SQL Oracle'
 )
 ---
 
