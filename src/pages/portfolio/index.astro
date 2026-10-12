@@ -1,6 +1,10 @@
+
 ---
 import DefaultLayout from '@layouts/DefaultLayout.astro'
-import { Heading } from 'accessible-astro-components'
+import { Heading, Card } from 'accessible-astro-components'
+import { getCollection } from 'astro:content'
+
+const projects = await getCollection('projects')
 ---
 
 <DefaultLayout
@@ -8,10 +12,8 @@ import { Heading } from 'accessible-astro-components'
   description="Portafolio académico y personal de Kariana Rivas, estudiante de Ingeniería de Sistemas."
   useTitleTemplate={false}
 >
-
   <section class="py-32">
     <div class="container">
-
       <p class="text-lg mb-4">
         Home / Portafolio
       </p>
@@ -21,36 +23,38 @@ import { Heading } from 'accessible-astro-components'
       </Heading>
 
       <p class="text-2xl max-w-3xl leading-relaxed">
-        En este espacio compartiré los proyectos que desarrolle
+        En este espacio comparto los proyectos que desarrollo
         durante mi formación como estudiante de Ingeniería de Sistemas.
       </p>
-
     </div>
   </section>
 
-
   <section class="py-24">
     <div class="container">
-
       <Heading level="h2" class="mb-6">
         Mis proyectos
       </Heading>
 
-      <div class="max-w-3xl">
-        <p class="text-xl leading-relaxed">
-          Actualmente estoy en proceso de desarrollar nuevos proyectos
-          académicos y personales. Próximamente encontrarás aquí mis
-          trabajos, junto con una descripción de las tecnologías
-          utilizadas y los aprendizajes obtenidos durante su desarrollo.
-        </p>
-
-        <p class="text-xl leading-relaxed mt-6">
-          Este espacio irá creciendo junto con mi formación como
-          Ingeniera de Sistemas.
-        </p>
-      </div>
-
+      {
+        projects.length > 0 ? (
+          <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {projects.map((project) => (
+              <Card
+                url={'/portfolio/' + project.id}
+                headingLevel="h3"
+                title={project.data.title}
+                footer={'Tecnologías: ' + project.data.tags.join(', ')}
+              >
+                {project.data.description}
+              </Card>
+            ))}
+          </div>
+        ) : (
+          <p class="text-xl">
+            Próximamente encontrarás aquí mis proyectos académicos.
+          </p>
+        )
+      }
     </div>
   </section>
-
 </DefaultLayout>
