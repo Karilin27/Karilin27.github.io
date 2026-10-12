@@ -5,6 +5,10 @@ import { Heading, Card } from 'accessible-astro-components'
 import { getCollection } from 'astro:content'
 
 const projects = await getCollection('projects')
+
+const filteredProjects = projects.filter(
+  (project) => project.id === 'project-08'
+)
 ---
 
 <DefaultLayout
@@ -36,9 +40,9 @@ const projects = await getCollection('projects')
       </Heading>
 
       {
-        projects.length > 0 ? (
+        filteredProjects.length > 0 ? (
           <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {projects.map((project) => (
+            {filteredProjects.map((project) => (
               <Card
                 url={'/portfolio/' + project.id}
                 headingLevel="h3"
@@ -51,7 +55,7 @@ const projects = await getCollection('projects')
           </div>
         ) : (
           <p class="text-xl">
-            Próximamente encontrarás aquí mis proyectos académicos.
+            No se encontró el proyecto Taller SQL Oracle.
           </p>
         )
       }
